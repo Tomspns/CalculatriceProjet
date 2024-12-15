@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./calculatrice.css">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="calculator">
+            <div class="display mb-3">
+                <input type="text" id="input" placeholder="Saisissez votre calcul" />
+                <input type="text" id="result" placeholder="Résultat" readonly />
+            </div>
+            <div class="history" id="history"></div>
+            <div class="buttons">
+                <button onclick="clearInput()" class="operator">C</button>
+                <button onclick="appendToInput('%')" class="operator">%</button>
+                <button onclick="appendToInput('√')" class="operator">√</button>
+                <button onclick="appendToInput('²')" class="operator">x²</button>
+                <button onclick="appendToInput('1')">1</button>
+                <button onclick="appendToInput('2')">2</button>
+                <button onclick="appendToInput('3')">3</button>
+                <button onclick="appendToInput('+')" class="operator">+</button>
+                <button onclick="appendToInput('4')">4</button>
+                <button onclick="appendToInput('5')">5</button>
+                <button onclick="appendToInput('6')">6</button>
+                <button onclick="appendToInput('-')" class="operator">-</button>
+                <button onclick="appendToInput('7')">7</button>
+                <button onclick="appendToInput('8')">8</button>
+                <button onclick="appendToInput('9')">9</button>
+                <button onclick="appendToInput('*')" class="operator">*</button>
+                <button onclick="appendToInput('0')">0</button>
+                <button onclick="appendToInput(',')" class="operator">,</button> <!-- Bouton pour la virgule -->
+                <button onclick="calculateResult()" class="operator">=</button>
+                <button onclick="appendToInput('/')" class="operator orange">/</button>
+            </div>
+        </div>
+    </div>
+    <script src="./calculatrice.js"></script>
+</body>
+</html>
